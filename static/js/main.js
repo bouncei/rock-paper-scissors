@@ -1,6 +1,5 @@
 function rpsGame(yourChoice) {
-    console.log(yourChoice);
-    // console.log(youChoice.src);
+   
 
     var humanChoice, botChoice;
 
@@ -8,8 +7,7 @@ function rpsGame(yourChoice) {
     botChoice = numberToChoice(randToRpsInt());
 
     var result = decideWinner(humanChoice, botChoice);
-    console.log(result);
-
+   
     var message = finalMessage(result);
 
 
@@ -46,14 +44,14 @@ function decideWinner(yourChoice, computerChoice){
 
 
 function finalMessage(yourScore){
-    if (yourScore===0){
-        return "{'message': 'You Lost', 'color': 'red'}"
+    if (yourScore[0] == 0){
+        return {'message': 'You Lost!', 'color': 'red'}
 
-    }else if (yourScore===0.5){
-        return "{'message': 'Draw', 'color': 'yellow'}"
+    }else if(yourScore[0] == 0.5){
+        return {'message': 'You Tied!', 'color': 'yellow'}
 
     }else{
-        return "{'message': 'You won!', 'color': 'green'}"
+        return {'message': 'You won!', 'color': 'green'}
 
     }
 
